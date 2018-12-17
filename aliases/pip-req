@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+WORKDIR="${WORKDIR:-/usr/src/app}";
+
+pip install -r "$WORKDIR/requirements.txt" --user
+pip install -r "$WORKDIR/requirements-dev.txt" --user
