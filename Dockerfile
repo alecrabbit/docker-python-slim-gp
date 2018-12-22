@@ -9,8 +9,8 @@ RUN apk update \
   && apk add \
     bash nano \
     build-base \
-    postgresql \
-    postgresql-dev \
+    libffi-dev \
+    openssl-dev \
     libpq \
   && rm -rf /home/user \
   && mkdir /home/user \
