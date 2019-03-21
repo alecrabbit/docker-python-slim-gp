@@ -11,6 +11,8 @@ RUN apk update \
     build-base \
     libffi-dev \
     openssl-dev \
+    freetype-dev \
+    libpng-dev \
     libpq \
   && rm -rf /home/user \
   && mkdir /home/user \
