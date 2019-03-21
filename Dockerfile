@@ -10,13 +10,9 @@ RUN set -xe \
   && apt-get update \
   && apt-get install -y \
       nano \
-      # build-essential \
-      # libffi-dev \
-      # libopenssl-dev \
       libfreetype6-dev \
       libpng-dev \
       libpq-dev \
-      # python-numpy python-scipy python-matplotlib ipython ipython-notebook python-pandas python-sympy python-nose \
     && rm -rf /home/user \
     && mkdir /home/user \
     && chmod 777 /home/user
