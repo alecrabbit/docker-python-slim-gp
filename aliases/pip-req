@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
 
 pip-install () {
+  echo "Processing: ${1}"
   if [[ -e "${1}" ]]
   then
     pip install -r "${1}" --user
   else
-    printf "no ${1} file\n"
+    printf "Not found: ${1}\n"
   fi
 }
 
