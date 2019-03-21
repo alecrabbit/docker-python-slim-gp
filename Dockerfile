@@ -11,7 +11,7 @@ RUN set -xe \
   && apt-get install -y \
       nano \
       # build-essential \
-      libffi-dev \
+      # libffi-dev \
       # libopenssl-dev \
       libfreetype6-dev \
       libpng-dev \
