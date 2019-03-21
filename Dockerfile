@@ -7,7 +7,8 @@ ENV PYTHONUNBUFFERED 1
 
 RUN apk update \
   && apk add \
-    bash nano \
+    bash \
+    nano \
     build-base \
     libffi-dev \
     openssl-dev \
