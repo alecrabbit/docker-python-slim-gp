@@ -1,6 +1,20 @@
 #!/usr/bin/env bash
 
+pip-install () {
+  if [[ -e "${1}" ]]
+  then
+    pip install -r "${1}" --user
+  else
+    printf "no ${1} file\n"
+  fi
+}
+
 WORKDIR="${WORKDIR:-/usr/src/app}";
 
-pip install -r "$WORKDIR/requirements.txt" --user
-pip install -r "$WORKDIR/requirements-dev.txt" --user
+pip-install "$WORKDIR/requirements.txt"
+pip-install "$WORKDIR/requirements-dev.txt"
+
+
+# info () {
+#     printf "\n${GREEN}${1}${NC}\n\n"
+# }
