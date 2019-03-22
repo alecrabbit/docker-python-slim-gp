@@ -12,6 +12,7 @@ RUN set -xe \
       nano \
       libfreetype6-dev \
       libpng-dev \
+      python3-tk \
       libpq-dev \
     && rm -rf /home/user \
     && mkdir /home/user \
