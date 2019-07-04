@@ -6,6 +6,12 @@ ENV PATH /scripts:/scripts/aliases:$PATH
 ENV PATH /home/user/.local/bin:$PATH
 ENV PYTHONUNBUFFERED 1
 
+RUN mkdir /usr/src/app
+WORKDIR /usr/src/app
+COPY ./keep-alive.sh /scripts/keep-alive.sh
+COPY ./aliases/* /scripts/aliases/
+COPY ./requirements.txt /usr/src/app/requirements.txt
+
 RUN set -xe \
   && apt-get update \
   && apt-get install -y \
@@ -16,14 +22,5 @@ RUN set -xe \
       libpq-dev \
     && rm -rf /home/user \
     && mkdir /home/user \
-    && chmod 777 /home/user
-
-RUN mkdir /usr/src/app
-WORKDIR /usr/src/app
-
-COPY ./keep-alive.sh /scripts/keep-alive.sh
-COPY ./aliases/* /scripts/aliases/
-
-# COPY bin/entrypoint.sh /
-# ENTRYPOINT ["/entrypoint.sh"]
-# CMD []
+    && chmod 777 /home/user \
+    && pip-req
