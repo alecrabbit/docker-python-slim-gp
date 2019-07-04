@@ -23,4 +23,4 @@ RUN set -xe \
     && rm -rf /home/user \
     && mkdir /home/user \
     && chmod 777 /home/user \
-    && pip-req
+    && pip install -r /usr/src/app/requirements.txt
