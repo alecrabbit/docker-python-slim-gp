@@ -10,3 +10,7 @@ scikit-learn
 tensorflow
 yfinance
 pillow
+xlrd
+openpyxl
+lxml
+html5lib
