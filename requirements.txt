@@ -14,3 +14,7 @@ xlrd
 openpyxl
 lxml
 html5lib
+quandl
+pandas-datareader
+python-dotenv
+plotly
