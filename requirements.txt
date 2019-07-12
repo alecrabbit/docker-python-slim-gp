@@ -18,3 +18,4 @@ quandl
 pandas-datareader
 python-dotenv
 plotly
+statsmodels
