@@ -7,9 +7,6 @@ ENV PATH /home/user/.local/bin:$PATH
 ENV PYTHONUNBUFFERED 1
 
 RUN mkdir /usr/src/app
-WORKDIR /usr/src/app
-COPY ./keep-alive.sh /scripts/keep-alive.sh
-COPY ./aliases/* /scripts/aliases/
 COPY ./requirements.txt /usr/src/app/requirements.txt
 
 RUN set -xe \
@@ -23,4 +20,10 @@ RUN set -xe \
     && rm -rf /home/user \
     && mkdir /home/user \
     && chmod 777 /home/user \
-    && pip install -r /usr/src/app/requirements.txt
+    && pip install -r /usr/src/app/requirements.txt \
+    && rm -rf /var/lib/apt/lists/* \
+    && rm /usr/src/app/requirements.txt
+
+  COPY ./keep-alive.sh /scripts/keep-alive.sh
+  COPY ./aliases/* /scripts/aliases/
+  WORKDIR /usr/src/app
