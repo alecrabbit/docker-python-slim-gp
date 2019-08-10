@@ -1,1 +1,1 @@
-python image with jupyter notebook
+general purpose python image
